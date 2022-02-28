@@ -42,9 +42,6 @@ dependencies {
     implementation(libs.jetpack.test.junit)
     implementation(libs.jetpack.test.runner)
 
-    // AndroidX – Paging
-    implementation(libs.jetpack.paging.runtime)
-
     // Arrow
     implementation(platform(libs.arrow.bom))
     implementation(libs.arrow.core)
