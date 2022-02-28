@@ -1,6 +1,6 @@
 #!/bin/sh
 # This is a script for making library modules in modular based project
-# We have supported 3 types of library modules.
+# We have supported 4 types of library modules.
 # regular - Regular library module without support for compose. This is where you would add some UI code and stuff
 # data - Data module is a library module for handling data stuff
 # compose - Regular library module with support for compose. Here you would also handle UI stuff
