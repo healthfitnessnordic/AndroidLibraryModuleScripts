@@ -16,20 +16,24 @@ fi
 echo "Enter package name"
 read package
 
+PACKAGE_FOLDER=$(echo $package | tr . /)
+
+echo "Package folders: $PACKAGE_FOLDER"
+
 echo "Making a library module with name: $1 and package name: $package"
-mkdir $1/src/main/java -p
+mkdir $1/src/main/java/$PACKAGE_FOLDER -p
 mkdir $1/src/main/res
 
 echo "Do you want a test folder for unit tests? (Y, N)"
 read test
 if [ "$test" != "N" ]; then
- mkdir $1/src/test
+ mkdir $1/src/test/$PACKAGE_FOLDER -p
 fi
 
 echo "Do you want a androidTest folder for android tests? (Y, N)"
 read atest
 if [ "$atest" != "N" ]; then
- mkdir $1/src/androidTest
+ mkdir $1/src/androidTest/$PACKAGE_FOLDER -p
 fi
 
 echo "Which module type would you like to make? Supported types are regular, compose, data and test (regular, compose, data, test)"
